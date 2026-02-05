@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "module": "Accountancy",
+      "title": "Lecture 3b: Revenue Recognition",
+      "status": "Completed",
+      "date": "2026-02-05"
+    }
+  ],
+  "recurring": [
+    { "module": "Accountancy", "freq": "2x/week" },
+    { "module": "Marketing", "freq": "1x/week" },
+    { "module": "Innovation", "freq": "1x/week" }
+  ]
+}

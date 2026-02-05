@@ -7,69 +7,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .column { background-color: #1e293b; border-radius: 0.75rem; padding: 1.25rem; min-height: 400px; }
-        .task-card { background-color: #334155; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.75rem; border-left: 4px solid #38bdf8; }
+        .column { background-color: #1e293b; border-radius: 0.75rem; padding: 1.25rem; min-height: 500px; display: flex; flex-direction: column; }
+        .task-card { background-color: #334155; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.75rem; border-left: 4px solid #38bdf8; position: relative; }
         .important { border-left-color: #ef4444; }
         .uni { border-left-color: #10b981; }
         .reselling { border-left-color: #f59e0b; }
         .life { border-left-color: #8b5cf6; }
+        .add-btn { margin-top: auto; width: 100%; border: 1px dashed #475569; padding: 0.75rem; border-radius: 0.5rem; color: #94a3b8; font-size: 0.875rem; transition: all 0.2s; }
+        .add-btn:hover { border-color: #38bdf8; color: #f8fafc; background: #1e293b; }
     </style>
 </head>
 <body class="p-4 md:p-8">
     <header class="flex justify-between items-center mb-10 border-b border-slate-700 pb-6">
         <div>
             <h1 class="text-3xl font-bold text-sky-400">Command Centre 🦞</h1>
-            <p class="text-slate-400">Operational Hub for Arran</p>
+            <p class="text-slate-400">Arran's Operational Hub</p>
         </div>
-        <div class="text-right hidden md:block">
-            <div class="text-sm text-slate-500 uppercase tracking-wider font-semibold">System Status</div>
-            <div class="text-emerald-400 font-medium">Claw Online</div>
+        <div class="text-right">
+            <div class="text-sm text-slate-500 uppercase tracking-wider font-semibold">Live Sync</div>
+            <div class="text-emerald-400 font-medium">Claw Connected</div>
         </div>
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- IMPORTANT COLUMN -->
+        <!-- IMPORTANT -->
         <div class="column">
             <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-red-400">🔥 IMPORTANT</h2>
-            <div id="col-important" class="space-y-3">
+            <div id="col-important" class="flex-grow space-y-3">
                 <div class="task-card important">
-                    <div class="font-semibold text-sm">Welcome to your Hub</div>
-                    <div class="text-xs text-slate-400 mt-1">High priority tasks appear here.</div>
+                    <div class="font-semibold text-sm">Dashboard Live</div>
+                    <div class="text-xs text-slate-400 mt-1">Bookmark this URL!</div>
                 </div>
             </div>
+            <a href="https://wa.me/447462552695?text=Important%20Task:%20" class="add-btn text-center mt-4">+ Add Important Task</a>
         </div>
 
-        <!-- UNI COLUMN -->
+        <!-- UNI -->
         <div class="column">
             <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-emerald-400">🎓 UNI</h2>
-            <div id="col-uni" class="space-y-3">
+            <div id="col-uni" class="flex-grow space-y-3">
                 <div class="task-card uni">
                     <div class="font-semibold text-sm text-emerald-100">EFIM10030: Lecture 3b</div>
-                    <div class="text-xs text-slate-400 mt-1">Worksheet Deep-Filled & Sent.</div>
+                    <div class="text-xs text-slate-400 mt-1">Deep-Fill Complete.</div>
                     <div class="mt-2 inline-block px-2 py-0.5 bg-emerald-900/50 text-emerald-400 text-[10px] rounded uppercase font-bold">Done</div>
                 </div>
             </div>
+            <a href="https://wa.me/447462552695?text=Uni%20Task:%20" class="add-btn text-center mt-4">+ Add Uni Task</a>
         </div>
 
-        <!-- RESELLING COLUMN -->
+        <!-- RESELLING -->
         <div class="column">
             <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-amber-400">💰 RESELLING</h2>
-            <div id="col-reselling" class="space-y-3">
-                <p class="text-xs text-slate-500 italic">No active inventory tasks.</p>
+            <div id="col-reselling" class="flex-grow space-y-3 text-center py-10">
+                <p class="text-xs text-slate-500 italic">Tap below to add inventory.</p>
             </div>
+            <a href="https://wa.me/447462552695?text=Reselling%20Task:%20" class="add-btn text-center mt-4">+ Add Reselling Task</a>
         </div>
 
-        <!-- LIFE ADMIN COLUMN -->
+        <!-- LIFE ADMIN -->
         <div class="column">
             <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-purple-400">🏠 LIFE ADMIN</h2>
-            <div id="col-life" class="space-y-3">
-                <p class="text-xs text-slate-500 italic">All quiet on the admin front.</p>
+            <div id="col-life" class="flex-grow space-y-3 text-center py-10">
+                <p class="text-xs text-slate-500 italic">Tap below for admin/to-dos.</p>
             </div>
+            <a href="https://wa.me/447462552695?text=Life%20Admin%20Task:%20" class="add-btn text-center mt-4">+ Add Life Admin</a>
         </div>
     </div>
 
     <footer class="mt-12 pt-6 border-t border-slate-800 text-center text-slate-500 text-xs">
-        Updated by Claw 🦞 | 2026-02-05
+        System Operational | Syncing via WhatsApp
     </footer>
 </body>
 </html>
